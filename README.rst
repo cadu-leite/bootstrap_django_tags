@@ -26,7 +26,7 @@ to use the tags in django tamplates
  <form method="POST">
   {% csrf_token %}
   <fieldset>
-   {% bootstrap_form_field form %}
+   {% bootstrap_form form %}
   </fieldset>
   <div class="actions" >
    <input type="submit" class="btn primary" value="Enviar">
@@ -41,8 +41,8 @@ you may use the same template tag to format fields, not the entire form
  <form method="POST">
   {% csrf_token %}
   <fieldset>
-	  {% bootstrap_form_field form.username %}
-   {% bootstrap_form_field form.password %}
+	  {% bootstrap_form form.username %}
+   {% bootstrap_form form.password %}
 	 </fieldset>
 	 <div class="actions" >
 	  <input type="submit" class="btn primary" value="Enviar">
