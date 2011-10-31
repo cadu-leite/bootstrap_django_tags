@@ -4,7 +4,7 @@ import django
 register = template.Library()
 
 @register.simple_tag
-def bootstrap_form_field(obj, required=False):
+def bootstrap_form(obj, required=False):
     '''
     the required param, is only used when obj = Field for optional required fields.
     '''
@@ -25,7 +25,7 @@ def form_field(field, required=False):
 
 def form(form):
     form_html = ''
-    t = template.loader.get_template('form_field.html')
+    t = template.loader.get_template('bootstrap_tags/form_field.html')
     
  
     for fld in form.visible_fields():
