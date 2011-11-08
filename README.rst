@@ -42,7 +42,7 @@ you may use the same template tag to format fields, not the entire form
     {% csrf_token %}
     <fieldset>
         {% bootstrap_form form.username %}
-    {% bootstrap_form form.password %}
+        {% bootstrap_form form.password %}
     </fieldset>
     <div class="actions" >
         <input type="submit" class="btn primary" value="Enviar">
