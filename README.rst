@@ -24,14 +24,14 @@ to use the tags in django tamplates
   {% load bootstrap_tags %}
 
  <form method="POST">
-  {% csrf_token %}
-  <fieldset>
-   {% bootstrap_form form %}
-  </fieldset>
-  <div class="actions" >
-   <input type="submit" class="btn primary" value="Enviar">
-   <input type="reset" class="btn " value="Cancelar">
-  </div>
+    {% csrf_token %}
+    <fieldset>
+        {% bootstrap_form form %}
+    </fieldset>
+    <div class="actions" >
+        <input type="submit" class="btn primary" value="Enviar">
+        <input type="reset" class="btn " value="Cancelar">
+    </div>
  </form>
 
 you may use the same template tag to format fields, not the entire form
@@ -39,15 +39,15 @@ you may use the same template tag to format fields, not the entire form
 ::
 
  <form method="POST">
-  {% csrf_token %}
-  <fieldset>
-	  {% bootstrap_form form.username %}
+    {% csrf_token %}
+    <fieldset>
+        {% bootstrap_form form.username %}
     {% bootstrap_form form.password %}
-	 </fieldset>
-	 <div class="actions" >
-	  <input type="submit" class="btn primary" value="Enviar">
-	  <input type="reset" class="btn " value="Cancelar">
-	 </div>
+    </fieldset>
+    <div class="actions" >
+        <input type="submit" class="btn primary" value="Enviar">
+        <input type="reset" class="btn " value="Cancelar">
+    </div>
  </form>
 
 
