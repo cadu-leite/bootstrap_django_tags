@@ -30,11 +30,11 @@ def form(form):
  
     for fld in form.visible_fields():
         row = t.render(template.Context({'field': fld,}))
-        form_html += u'<div class="clearfix"> {field_html} </div>'.format(field_html=row)  
+        form_html += u'<div class="clearfix"> %s </div>' %(row)  
     
     for fld in form.hidden_fields():
         row = unicode(fld)
-        form_html += u'<div style="display:none;"> {field_html} </div>'.format(field_html=row)  
+        form_html += u'<div style="display:none;"> %s </div>' %(row)  
     
     
     return form_html
