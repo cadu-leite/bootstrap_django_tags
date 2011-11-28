@@ -1,8 +1,13 @@
+<div class="clearfix  ">
 {{ field.label_tag }} 
-<div class="input" id="field_{{ field.name }}">
-    {% if field.field.required or required %}<span class="required" title="Obrigatório">*</span>{% endif %}
+<div class="input error" id="field_{{ field.name }}">
+    {% if field.field.required or required %}<span class="required" style="text-weight:bold; color:red;font-size:15px;" title="Obrigatório">*</span>{% endif %}
     {{ field }} {{ additional_text }}
-{% if field.help_text %}<div class="clearfix help-block">{{ field.help_text }}</div>{% endif %}
-{% if field.errors %}<div class="clearfix error">{{ field.errors|join:", " }}</div>{% endif %}
+    <div class="clearfix help-block">
+{% if field.help_text %}{{ field.help_text }}{% endif %}
+{% if field.errors %}<span class="help-block error" style="color:red; font-weight:bold;">{{ field.errors|join:", " }}</span>{% endif %}
 </div>
-    
+
+
+</div>
+</div>
